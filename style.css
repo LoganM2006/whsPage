@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+  }
+  
+  /* Style the header */
+  .header {
+    grid-area: header;
+    padding: 30px;
+    background-color: #042350;
+    color: #F65C02;
+    text-align: center;
+    font-size: 35px;
+    grid-column-start: 2;
+    border-bottom: 4px solid #F65C02;
+  }
+  
+  /* The grid container */
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+      'header header header header header header' 
+      'left middle middle middle middle right' 
+      'footer footer footer footer footer footer';
+    /* grid-column-gap: 10px; - if you want gap between the columns */
+  } 
+  
+  h1{
+    font-size: 1.2em;
+    text-shadow: 2px 2px 2px black;
+    font-family: roboto-slab;
+    margin-bottom: 0;
+  }
+  .snd{
+    margin-top: 0;
+    font-size: 1em;
+    text-shadow: 2px 2px 2px black;
+    font-family: roboto-slab;
+  }
+  h2{
+    color: #01256F;
+    font-family: roboto-slab;
+  }
+  .left,
+  .middle,
+  .right {
+    padding: 10px;
+
+  }
+  p{
+    color: #01256F;
+    font-family: open-sans;
+    font-size: 15pt;
+  }
+li{color: #01256F;
+font-family: open-sans;
+font-size: large;}
+
+.logo {
+
+  height: 130px;
+}
+
+.flex-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.pics{
+width: 30%;
+
+}
+
+h5{
+  color: white;
+  text-align: center;
+  text-overflow: clip;
+  text-shadow: 2px 2px 1px black;
+}
+  /* Style the left column */
+  .left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    grid-area: left;
+    background-color: #042350;
+    max-width: 400px;
+    grid-row-start: 1;
+    height: 100%;
+    
+  }
+
+  
+  /* Style the middle column */
+  .middle {
+    grid-area: middle;
+    display: flex;
+    border-left: 4px solid #F65C02;
+    border-bottom: 4px solid #F65C02;
+    min-width: 400px;
+  }
+  
+  /* Style the right column */
+  .right {
+    grid-area: right;
+    border-left: 4px solid #F65C02;
+    border-bottom: 4px solid #F65C02;
+  }
+  
+  /* Style the footer */
+  .footer {
+    grid-area: footer;
+    background-color: #042350;
+    padding: 10px;
+    text-align: center;
+    color: white;
+
+  }
+  
+/* Nav bar  */
+  .nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+  }
+  
+  .nav li {
+    float: left;
+  }
+  
+  .nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .nav li a:hover {
+    background-color: #111;
+  }
+
+
+
+
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media (max-width: 600px) {
+    .grid-container  {
+      grid-template-areas: 
+        'header header header header header header' 
+        'left left left left left left' 
+        'middle middle middle middle middle middle' 
+        'right right right right right right' 
+        'footer footer footer footer footer footer';
+    }
+  }
